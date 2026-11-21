@@ -15,14 +15,12 @@
 </head>
 <body class="bg-slate-100 text-slate-800 antialiased">
 
-    <!-- BANNER TOPO - MONETIZAÇÃO -->
     <div class="bg-slate-950 border-b border-slate-800 py-2 px-4 text-center">
         <div class="max-w-5xl mx-auto bg-slate-900 border border-dashed border-slate-700 rounded py-2.5 px-4 text-xs text-slate-400">
             [ESPAÇO RESERVADO PARA ANÚNCIO GOOGLE ADSENSE - 728x90 / RESPONSIVO]
         </div>
     </div>
 
-    <!-- CABEÇALHO -->
     <header class="bg-slate-900 text-white shadow-lg sticky top-0 z-40 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
@@ -49,11 +47,188 @@
 
     <main class="max-w-6xl mx-auto px-4 py-8">
 
-        <!-- TEXTO BASE: MATEUS 7:24-29 (NVI) -->
         <section id="alicerce" class="mb-8">
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-amber-600 p-6 md:p-8">
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                     <span class="text-xs font-bold uppercase tracking-widest text-amber-700">Fundamento deste Ministério • Mateus 7:24-29 (NVI)</span>
                     <span class="text-xs text-slate-400">A Parábola dos Dois Alicerces</span>
                 </div>
-                <blockquote class="font-
+                <blockquote class="font-serif-editorial text-sm md:text-base text-slate-700 leading-relaxed space-y-2">
+                    <p><strong class="text-amber-700">24</strong> "Portanto, quem ouve estas minhas palavras e as pratica é como um homem prudente que construiu a sua casa sobre a rocha. <strong class="text-amber-700">25</strong> Caiu a chuva, transbordaram os rios, sopraram os ventos e deram contra aquela casa, e ela não caiu, porque tinha seus alicerces na rocha.</p>
+                    <p><strong class="text-amber-700">26</strong> Mas quem ouve estas minhas palavras e não as pratica é como um insensato que construiu a sua casa sobre a areia. <strong class="text-amber-700">27</strong> Caiu a chuva, transbordaram os rios, sopraram os ventos e deram contra aquela casa, e ela caiu. E foi grande a sua queda".</p>
+                    <p><strong class="text-amber-700">28</strong> Quando Jesus acabou de dizer essas coisas, as multidões estavam maravilhadas com o seu ensino, <strong class="text-amber-700">29</strong> porque ele as ensinava como quem tem autoridade, e não como os mestres da lei.</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="destaque" class="mb-12">
+            <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-800 text-white p-6 md:p-10">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span class="bg-amber-600 text-slate-950 text-xs font-bold uppercase px-3 py-1 rounded-full tracking-wider">
+                        Devocional & Solução do Dia
+                    </span>
+                    <span class="text-slate-400 text-sm" id="hero-data">Atualizado diariamente às 06h00</span>
+                </div>
+
+                <h1 id="hero-titulo" class="text-2xl md:text-4xl font-bold leading-tight mb-4 text-white">
+                    Carregando palavra do dia...
+                </h1>
+
+                <blockquote class="border-l-4 border-amber-500 bg-slate-800/80 p-4 md:p-5 rounded-r-lg my-6">
+                    <p id="hero-versiculo" class="font-serif-editorial italic text-base md:text-lg text-amber-100 mb-2"></p>
+                    <footer id="hero-ref" class="text-xs font-semibold uppercase tracking-wider text-amber-400"></footer>
+                </blockquote>
+
+                <p id="hero-resumo" class="text-slate-300 leading-relaxed mb-6 text-base md:text-lg"></p>
+
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                    <button id="hero-btn" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold py-3 px-6 rounded-lg transition shadow-md cursor-pointer">
+                        Ler Solução Completa + Oração Guiada
+                    </button>
+                    <span id="hero-meta" class="text-xs text-slate-400"></span>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <div class="lg:col-span-2 space-y-8" id="artigos">
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-300 pb-4">
+                    <h2 class="text-xl font-bold text-slate-900">Soluções Bíblicas Recentes</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="filtrarPosts('Todos')" class="filtro-btn bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-md cursor-pointer">Todos</button>
+                        <button onclick="filtrarPosts('Finanças')" class="filtro-btn bg-white text-slate-700 hover:bg-slate-200 text-xs font-semibold px-3 py-1.5 rounded-md border border-slate-300 cursor-pointer">Finanças</button>
+                        <button onclick="filtrarPosts('Casamento & Filhos')" class="filtro-btn bg-white text-slate-700 hover:bg-slate-200 text-xs font-semibold px-3 py-1.5 rounded-md border border-slate-300 cursor-pointer">Casamento & Filhos</button>
+                        <button onclick="filtrarPosts('Moral & Integridade')" class="filtro-btn bg-white text-slate-700 hover:bg-slate-200 text-xs font-semibold px-3 py-1.5 rounded-md border border-slate-300 cursor-pointer">Moral & Integridade</button>
+                        <button onclick="filtrarPosts('Vida Espiritual')" class="filtro-btn bg-white text-slate-700 hover:bg-slate-200 text-xs font-semibold px-3 py-1.5 rounded-md border border-slate-300 cursor-pointer">Vida Espiritual</button>
+                    </div>
+                </div>
+
+                <div id="lista-artigos" class="space-y-6"></div>
+
+                <div class="bg-white border border-dashed border-slate-400 rounded-xl p-6 text-center">
+                    <span class="text-[10px] uppercase tracking-widest text-slate-400 block mb-1">Publicidade</span>
+                    <p class="text-sm font-medium text-slate-600">[BLOCO GOOGLE ADSENSE IN-FEED / NATIVO]</p>
+                </div>
+
+                <section id="cadastro-oracao" class="bg-slate-900 text-white rounded-2xl shadow-lg p-6 md:p-8 border border-slate-800">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Compromisso Diário às 06h00</span>
+                    <h2 class="text-2xl font-bold mt-1">Receba uma Oração Específica Todo Dia</h2>
+                    <p class="text-sm text-slate-300 mt-1 mb-6">Cadastre seu contato e receba gratuitamente uma palavra e oração direcionada para a sua batalha atual.</p>
+
+                    <form id="form-inscricao" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Seu Primeiro Nome</label>
+                            <input type="text" id="insc-nome" required placeholder="Ex: Marcos" class="w-full px-3 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Canal de Envio</label>
+                            <select id="insc-canal" onchange="atualizarPlaceholderContato()" class="w-full px-3 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="E-mail">E-mail</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Seu WhatsApp ou E-mail</label>
+                            <input type="text" id="insc-contato" required placeholder="(11) 99999-9999" class="w-full px-3 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Foco da Oração</label>
+                            <select id="insc-foco" class="w-full px-3 py-2.5 rounded-lg bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                                <option value="Finanças e Provisão">Finanças e Provisão</option>
+                                <option value="Casamento e Filhos">Casamento e Filhos</option>
+                                <option value="Integridade Moral">Integridade Moral</option>
+                                <option value="Força Espiritual">Força Espiritual</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2 pt-2">
+                            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold py-3 rounded-lg transition cursor-pointer">
+                                Quero Receber a Oração Diária
+                            </button>
+                        </div>
+                    </form>
+                    <div id="feedback-inscricao" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-700 text-emerald-200 text-sm"></div>
+                </section>
+
+                <section id="oracao" class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 md:p-8">
+                    <div class="mb-6">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Intercessão entre Irmãos</span>
+                        <h2 class="text-2xl font-bold text-slate-900 mt-1">Pedido de Oração Específico</h2>
+                        <p class="text-sm text-slate-600 mt-1">Compartilhe sua batalha atual (pode usar apenas o primeiro nome). Homens orando por homens.</p>
+                    </div>
+
+                    <form id="form-oracao" class="space-y-4 mb-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Seu Nome (ou Inicial)</label>
+                                <input type="text" id="oracao-nome" required placeholder="Ex: Carlos M." class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-amber-600">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Área da Batalha</label>
+                                <select id="oracao-area" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:border-amber-600">
+                                    <option value="Provisão Financeira & Dívidas">Provisão Financeira & Dívidas</option>
+                                    <option value="Sabedoria no Casamento">Sabedoria no Casamento</option>
+                                    <option value="Criação e Proteção dos Filhos">Criação e Proteção dos Filhos</option>
+                                    <option value="Integridade Moral & Pureza">Integridade Moral & Pureza</option>
+                                    <option value="Força Espiritual & Ansiedade">Força Espiritual & Ansiedade</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Motivo Específico</label>
+                            <textarea id="oracao-texto" rows="3" required placeholder="Descreva brevemente pelo que devemos orar..." class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-amber-600"></textarea>
+                        </div>
+                        <button type="submit" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-6 py-2.5 rounded-lg transition cursor-pointer">
+                            Enviar Pedido para o Mural
+                        </button>
+                    </form>
+
+                    <div id="mural-pedidos" class="space-y-4">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Clamores Recentes</h3>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex justify-between items-start gap-4">
+                            <div>
+                                <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Provisão Financeira & Dívidas</span>
+                                <p class="text-sm text-slate-700 mt-2">"Peço oração para quitar uma dívida atrasada sem comprometer o sustento dos meus filhos este mês."</p>
+                                <span class="text-xs text-slate-500 mt-1 block">— Ricardo S., 38 anos</span>
+                            </div>
+                            <button onclick="orarPorPedido(this)" class="shrink-0 text-xs bg-white border border-slate-300 hover:border-amber-600 px-3 py-1.5 rounded-md font-medium transition cursor-pointer">
+                                🙏 Orei (14)
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="space-y-8">
+
+                <div id="enquete" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Você escolhe o tema</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Qual desafio devemos abordar na série desta semana?</h3>
+                    <p class="text-xs text-slate-500 mb-4">Seu voto direciona os próximos estudos bíblicos.</p>
+                    <div id="opcoes-enquete" class="space-y-2.5"></div>
+                    <p id="feedback-enquete" class="hidden text-xs font-semibold text-emerald-700 mt-3">✓ Voto registrado! Obrigado por participar.</p>
+                </div>
+
+                <div class="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-md">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 rounded">
+                        Ferramenta Recomendada
+                    </span>
+                    <h3 class="text-lg font-bold mt-3 mb-2">Bíblia de Estudo do Homem + Guia Financeiro</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Notas práticas voltadas para liderança no lar, paternidade e administração financeira segundo os princípios bíblicos.
+                    </p>
+                    <a href="#afiliado-link" class="block text-center bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold text-sm py-2.5 px-4 rounded-lg transition">
+                        Ver Oferta Recomendada →
+                    </a>
+                    <span class="block text-[10px] text-slate-400 text-center mt-2">Link de afiliado • Apoia este ministério</span>
+                </div>
+
+                <div class="bg-white border border-dashed border-slate-400 rounded-2xl p-6 text-center h-64 flex flex-col items-center justify-center">
+                    <span class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Publicidade</span>
+                    <p class="text-xs font-medium text-slate-500">[BANNER GOOGLE ADSENSE 300x250]</p>
+                </div>
+
+            </aside>
+        </div>
+    </main>
